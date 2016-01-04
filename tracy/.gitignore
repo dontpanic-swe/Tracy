@@ -1,0 +1,4 @@
+swreq.komodoproject
+assets
+protected/runtime
+*.php~

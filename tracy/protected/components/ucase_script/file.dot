@@ -1,0 +1,35 @@
+digraph UseCase {
+    rankdir=LR;
+    compound=true;
+
+    // Actors
+    subgraph primaryActors {
+        peripheries=0;
+        labelloc="b";
+        node [shape=plaintext];
+        edge  [arrowhead="oarrow"];
+
+        // Sticky men
+        subgraph clusterActor1 {
+                    label="Padre";
+                    actor_1[image="protected/components/ucase_scrpit/man.svg" label=""];
+                };
+    } // primaryActors
+
+
+    // System
+    subgraph clusterSystem {
+        labelloc="t";
+        label="Sistema";
+
+        node [shape=ellipse, style=solid];
+        event_7 [label="iAdd an Event"];
+    } // clusterSystem
+
+
+    // Actor -> use case event
+    edge [dir=none, style=solid];
+    
+    /* event iAdd an Event */
+actor_1 -> event_7; // (Primary) 
+} 
